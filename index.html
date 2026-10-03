@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+    
+<html>
+    <head>
+        <html lan="es">
+        <meta charset="UTF-8">
+        <title>Tarjeta de piloto.</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    </head>
+    <body>
+    <div class="tarjeta">
+    <main><!-- Presentacion del piloto.-->          
+            <h1>PILOTO</h1>
+            <h2>Carlos García</h2>
+            <div class="contenedor-imagen">
+            <img src="https://superauto.com.ar/wp-content/uploads/piloto-de-automovilismo-1.avif" alt="Carlos Garcia en el Gran Premio de Barcelona" width="100%" height="60%">
+            <span class="etiqueta-campeon">CAMPEON</span>
+            </div>
+        </main><br>
+    <nav><!-- Seccion de navegacion a las distintas secciones de la tarjeta.-->
+        <a href="#logros">Logros</a>
+        <a href="#historia">Historia</a>
+        <a href="#datos">Datos</a>
+    </nav>
+    <div id="estadistica">
+        <a href="estadisticas.html" target="_blank">Ver Estadisticas</a>
+    </div>
+    <section id="logros"><h3>Logros</h3>
+    <p>El piloto Carlos García, es un experimentado competidor que ha corrido una gran cantidad
+        de temporadas en distintas categorías y multiples equipos.
+    </p>
+        <ol><!-- Lista con la trayectoria del piloto.-->
+            <li>Campeonato regional de Cataluña.
+                <ul>
+                    <li>2015</li>
+                    <li>2016</li>
+                    <li>2019</li>
+                    <li>2020</li>
+                    <li>2021</li>
+                </ul>
+            </li>
+            <li>Copa Noreste de velocidad. 
+                <ul>
+                    <li>2017</li>
+                    <li>2018</li>
+                </ul>
+            </li>
+            <li>European Monoplace Talent Cup 2022</li>
+            <li>Copa de España de turismos
+                <ul>
+                    <li>2023</li>
+                    <li>2024</li>
+                    <li>2025</li>
+                    <li>Actualmente</li>
+                </ul>
+            </li>
+        </ol>
+        </section><!-- Historia del piloto en un parrafo, no se si sera demasiada informacion para una tarjeta-->
+        <section id="historia"><h3>Historia</h3>
+        <p>Este piloto de origen Aragones, inicio su carrera en circuitos locales y rallyes de tierra 
+            cuando era joven. Fue reclutado por la escuderia de la que actualmente es piloto principal.
+            <a href="https://www.velocidadextrema.es" target="_blank">"Velocidad Extrema"</a> y ahora esta participando en la copa de España de turismos, donde
+            lleva varias temporadas cosechando exitos muy valiosos para la escuderia.</p>
+        </section>    
+        </section>
+        <section id="datos"><h3>Datos</h3>
+        <p>Si desea contactarnos para notas de prensa o acuerdos de esponsors, pongase en contacto 
+            con nosotros rellenando este sencillo formulario.
+        </p>
+        <form><!-- Zona del formulario como indicaba el ejercicio.-->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="datos" placeholder="Introduzca su nombre">
+            <br>
+
+            <label for="phone">Telefono:</label>
+            <input type="tel" id="phone" name="datos" maxlength="12" placeholder="Introduzca su telefono" required>
+            <br>
+
+            <label for="useremail">Email:</label>
+            <input type="email" id="useremail" name="datos" placeholder="Introduzca su email" required>
+            <br>
+
+            <label for="comentarios">Nos interesa su opinion:</label>
+            <textarea id="comentarios" name="comentarios" rows="8" cols="30" required></textarea> 
+            <p>Si esta de acuerdo con la <a href="https://www.rfeda.es/docs/pdf/proteccion-de-datos/estatutos.pdf" target="_blank">politica</a> de este equipo, marque la casilla "Si" para continuar.</p>
+            <br>
+            <input type="radio" id="si" value="si" name="licencia" required>
+            <label for="si">Si</label>
+            <input type="radio" id="no" value="no" name="licencie">
+            <label for="no">No</label>
+            <br>
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpiar</button>
+        </form>
+    </section>
+    </div>
+    </body>
+</html>
+
+    

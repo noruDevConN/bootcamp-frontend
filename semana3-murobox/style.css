@@ -1,0 +1,152 @@
+/* 1. Reseteo global (¡NO OLVIDES EL ASTERISCO!) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Variables CSS (Solo variables, nada de background-color aquí) */
+:root {
+    --color-fondo: #1a1a1a;
+    --color-panel: #2c2c2c;
+    --color-texto: #f0f0f0;
+    --color-luz-apagada: #444;
+    --color-luz-encendida: orangered;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+/* 3. Muro del Box */
+.muro-box {
+    background-color: var(--color-panel);
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 10px;
+}
+
+.panel-telemetria {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.medidor {
+    background-color: #3d3d3d;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease; /* ← Transición suave */
+}
+
+.medidor:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 4. Semáforo F1 */
+.semaforo-f1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    border: 5px solid grey;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 2rem;
+}
+
+.luz1{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--color-luz-apagada);
+    border: 3px solid #333;
+    /* La animación se aplicará con clases específicas */
+}
+
+.luz2{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--color-luz-apagada);
+    border: 3px solid #333;
+}
+
+.luz3{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--color-luz-apagada);
+    border: 3px solid #333;
+}
+
+.luz4{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--color-luz-apagada);
+    border: 3px solid #333;
+}
+
+.luz5{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--color-luz-apagada);
+    border: 3px solid #333;
+}
+
+
+
+@keyframes encenderApagar {
+    0%, 10% { 
+        background-color: var(--color-luz-apagada); 
+        opacity: 0.3;
+    }
+    20%, 80% { 
+        background-color: var(--color-luz-encendida); 
+        opacity: 1;
+        box-shadow: 0 0 20px var(--color-luz-encendida);
+    }
+    90%, 100% { 
+        background-color: var(--color-luz-apagada); 
+        opacity: 0.3;
+    }
+}
+
+/* Animación secuencial con delays */
+.luz1 { animation: encenderApagar 5s infinite; animation-delay: 0s; }
+.luz2 { animation: encenderApagar 5s infinite; animation-delay: 1s; }
+.luz3 { animation: encenderApagar 5s infinite; animation-delay: 2s; }
+.luz4 { animation: encenderApagar 5s infinite; animation-delay: 3s; }
+.luz5 { animation: encenderApagar 5s infinite; animation-delay: 4s; }
+
+/* 5. Botón (FUERA del semáforo en el HTML) */
+.btn-iniciar {
+    display: block;
+    background-color: var(--color-luz-encendida);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 2rem auto;
+    transition: all 0.3s ease;
+}
+
+.btn-iniciar:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}

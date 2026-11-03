@@ -1,0 +1,9 @@
+/* Archivo para importatar con las variables CSS del proyecto. */
+:root{
+    --background-color: #07308e;
+    --elementos1-color: #032360;
+    --elementos2-color: #03235f;
+    --contenedores-color: #2b450c;
+    --fuente-color: greenyellow;
+    --border-color: green;
+}

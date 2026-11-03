@@ -1,0 +1,19 @@
+/* Archivo con la base para importar.para el proyecto. */
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;;
+}
+
+body{
+    background-color: var(--background-color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--fuente-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    /* Usando position: sticky para dejar fijo el header y hacer dinamico el main. */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}

@@ -1,0 +1,155 @@
+/* Siguiendo el ejemplo de diseño responsivo, hay que diseñarlo para dispositivo pequeño 
+y despues añadir el @media query para tablet y escritorio. */
+@import url(variables.css);
+@import url(base.css);
+
+header{
+    display: flex;
+    justify-content: center;
+    box-sizing: content-box;
+    background-color: var(--background-color);
+    border: 1px solid  var(--border-color);
+    border-radius: 5px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 60px;
+    padding-bottom: 20px;
+    align-items: center;
+}
+
+main{
+    box-sizing: content-box;
+    flex: 1;
+    overflow-y: auto;
+    padding-top: 29%;
+}
+
+.calendario{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1%;
+}
+
+.ric_tormo, .montmelo, .algarve, .jarama, .arcos, .motorland{
+    border: 3px solid var(--contenedores-color);
+    border-radius: 5px;
+    padding: 2%;
+}
+
+h2{
+    font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+h3{
+    font-size: clamp(1rem, 3vw, 1.5rem);
+  animation: parpadeo 1s linear infinite;
+}
+
+@keyframes parpadeo {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+} 
+
+img{
+    width: 95%;
+    padding: 3%;
+}
+
+h4{
+    text-align: right;
+    padding-inline: 3px;
+    text-decoration: underline;
+}
+
+p{
+    padding: 3px;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+a{
+    text-decoration: none;
+    color: var(--fuente-color);
+}
+
+footer{
+    box-sizing: content-box;
+    background-color: var(--background-color);
+    border: 1px solid  var(--border-color);
+    border-radius: 5px;
+    margin: auto;
+    width: 90%;
+    height: 50px;
+    align-items: center;
+}
+
+.btn-menu{
+    width: 90%;
+    height: 50px;
+    
+    background-color: var(--contenedores-color);
+    border-radius: 5px;
+    color: var(--fuente-color);
+    transition: background-color 0.3s, color 0.3s;
+}/* Area para maquetar los botones */
+
+    .btn-menu:hover{
+        
+        background-color: var(--fuente-color);
+        cursor: pointer;
+        color: var(--contenedores-color);
+    }
+    
+.btn-shop{
+    width: 90%;
+    height: 40%;
+    margin: 20px;
+    background-color: var(--contenedores-color);
+    border-radius: 5px;
+    color: var(--fuente-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+    .btn-shop:hover{
+        background-color: var(--fuente-color);
+        color: var(--contenedores-color);
+        cursor: pointer;
+    }
+    /* Area para el @media query */
+
+    @media (min-width: 768px) {
+  /* Contenedor principal */
+    body{
+        padding-inline: 15%;
+        align-items: center;
+        width: 70%;
+        
+    }
+
+    .calendario{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+        
+    .ric_tormo, .montmelo, .algarve, .jarama, .arcos, .motorland{
+        padding: 2%;
+        margin: 1%;
+
+    }
+
+img{
+    padding: 30px;
+    width: 60%;
+    height: auto;
+    border: 2px solid var(--border-color);
+}
+
+
+
+
+}
+   

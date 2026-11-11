@@ -1,0 +1,304 @@
+/* codigo CSS del ejercicio de la LandingPage, aprovechando lo aprendido en ejercicios anteriores y enfocandola primero al Mobile First.*/
+@import url(variables.css);
+@import url(base.css);
+
+/* ============================================
+   BASE = MÓVIL
+   ============================================ */
+
+/* ---------- CONTENEDOR: pantalla completa en móvil ---------- */
+header{
+  display: grid;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  height: 60%;
+  background-color: var(--relleno-color);
+  padding: 0;
+  align-items: center;
+}
+
+.menu-cabecera{
+  margin: 1%;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: 5px solid var(--fuente-color);
+} 
+
+.logo{
+  font-size: clamp(2rem, 8vw, 5rem);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 0;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.menu{
+  position: relative;
+  text-align: center;
+  margin: 10%;
+  padding: 10%;
+  width: 80%;
+  height: auto;
+  background-color: var(--relleno-color);
+  border: 2px solid var(--border-color);
+}
+
+.menu a{
+  text-decoration: none;
+  font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
+h2{
+    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    background-color: var(--fuente-color);
+    color: var(--border-color);
+    margin: 10px 20px;
+    text-decoration: none;
+  }
+/* Contenedor padre de los articulos. */
+article{
+  display: grid;
+  
+}
+
+  .parrafo, .parrafo2{
+    padding: 20px 5px;
+    margin: 20px;
+    border: 2px solid var(--border-color);
+    background-color: var(--relleno-color);
+  }
+
+  article h2{
+    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    background-color: var(--fuente-color);
+    color: var(--border-color);
+    margin: 0 20px;
+    padding: 5px;
+    text-decoration: none;
+  }
+
+  article a{
+    text-decoration: none;
+  }
+/* Contenedor padre de las tarjetas de los pilotos. */
+.tarjetas{
+  display: grid;
+}
+
+  #carlosgarcia, #davidcastellanos, #joangomez, #rmoreno, 
+  #AlexanderR, #samantapuig, #Albertomuñoz, #marcosdavila{
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    border: 3px solid var(--fuente-color);
+    background-color: var(--relleno-color);
+  }
+
+  .tarjetas h2{
+    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    background-color: var(--fuente-color);
+    color: var(--border-color);
+    margin: 0 20px;
+    text-decoration: none;
+  }
+
+    .tarjetas h4{
+      text-align: end;
+      margin-right: 5px;
+      font-size: clamp(1rem, 3vw, 1.5rem);
+      animation: parpadeo 1s linear infinite;
+    }
+
+    @keyframes parpadeo {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    } 
+
+
+  .tarjetas img{
+    width: 100%;
+    height: auto;
+    padding-right: 3px;
+  }
+
+  .tarjetas p{
+    text-align: center;
+    font-size: clamp(1rem, 3vw, 2rem);
+
+  }
+  /* Area de vehiculos. */
+.tarjetas-vehiculos{
+  display: grid;
+  align-items: center;
+  margin-top: 10px;
+}
+
+  .coche{
+    width: 100%;
+    height: auto;
+    padding-right: 0;
+    padding-left: 15px;
+    border: 3px solid var(--fuente-color);
+    background-color: var(--relleno-color);
+  }
+
+  .tarjetas-vehiculos img{
+    width: 100%;
+    height: auto;
+    align-items: center;
+    border: 3px solid var(--border-color);
+    /* Efecto de transicion.*/
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .tarjetas-vehiculos img:hover{
+    transform: scale(1.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+  }
+
+  .unidades p{
+    text-align: center;
+    font-size: clamp(1rem, 3vw, 2rem);
+  }
+/* Area de calendario. */
+.calendario{
+  display: grid;
+
+}
+
+  .ric_tormo, .montmelo, .algarve, .jarama, .arcos, .motorland{
+    border: 3px solid var(--contenedores-color);
+    border-radius: 5px;
+    padding: 2%;
+  }
+
+  .calendario img{
+    width: 95%;
+    padding: 3%;
+  }
+
+  .calendario h5{
+    text-align: end;
+  }
+
+  .calendario h4{
+    color:red;
+  }
+/* Area de la tienda. */
+#tienda{
+  display: grid;
+  align-items: center;
+  gap: 5px;
+  margin-top: 50px;
+}
+
+  .camisetas, .gorras, 
+  .sudaderas, .miscelania{
+    margin: 25px;
+    border: 3px solid var(--fuente-color);
+    height: 60px;
+    text-align: center;
+    background-color: var(--relleno-color);
+  }
+  /* Area para el catalogo de la tienda.*/
+  #camisetas, #gorras,
+  #sudaderas, #miscelania{
+    display: grid;
+    background-color: aliceblue;
+    margin: 1%;
+    padding: 1%;
+  }
+
+    .grid-camisetas, .grid-gorras,
+    .grid-sudaderas, .grid-miscelania h4 p{
+      background-color: var(--relleno-color);
+    }
+
+    #tienda img{
+      width: 100%;
+      height: auto;
+      border: 1px solid red;
+      border-radius: 10px;
+    }
+  /* Area para el formulario. */
+.formulario{
+  padding-top: 20px;
+  border: 2px solid var(--border-color);
+  background-color: var(--fuente-color);
+  color: var(--border-color);
+  font-size: clamp(1rem, 3vw, 2rem);
+  text-decoration: none;
+  text-align: center;
+}  
+
+.formregistro{
+  background-color: var(--relleno-color);
+  font-size: clamp(1rem, 3vw, 2rem);
+  text-decoration: none;
+  align-items: center;
+  margin: 4%;
+  padding: 2%;
+  border: 2px solid var(--border-color);
+}
+/* Area del footer. */
+footer{
+  padding:10%;
+  background-color: var(--relleno-color);
+  border-radius: 10px;
+  border: var(--border-color)
+}
+
+footer a{
+  text-decoration: none;
+  color: black;
+  font-size: small;
+  align-items: center;
+}
+/* Area del @media query. */
+/* ============================================
+   MEDIA QUERIES (Tablet y Escritorio)
+   ============================================ */
+
+/* TABLET (Pantallas mayores a 768px) */
+@media (min-width: 768px) {
+    
+    /* 1. Padding lateral del 10% y centrado */
+    body {
+        padding-left: 10%;
+        padding-right: 10%;
+        /* Opcional: limitar el ancho máximo para que no se estire en pantallas gigantes */
+        max-width: 1400px; 
+        margin: 0 auto; 
+    }
+
+    /* 2. Grids de 2 columnas para casi todo */
+    .tarjetas, 
+    .tarjetas-vehiculos, 
+    .calendario, 
+    #camisetas, #gorras, #sudaderas, #miscelania {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+        gap: 30px; /* Espacio entre tarjetas */
+    }
+}
+
+/* ESCRITORIO (Pantallas mayores a 1024px) */
+@media (min-width: 1024px) {
+    
+    /* En escritorio, los pilotos y vehículos se ven mejor en 3 columnas */
+    .tarjetas, 
+    .tarjetas-vehiculos {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+    
+    /* El calendario puede pasar a 3 columnas también */
+    .calendario {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
